@@ -1,7 +1,7 @@
-import { VoteComponent } from './vote.component'; 
+import { VoteComponent } from './vote.component';
 
 describe('VoteComponent', () => {
-  var component: VoteComponent; 
+  let component: VoteComponent;
 
   beforeEach(() => {
     component = new VoteComponent();
@@ -9,7 +9,7 @@ describe('VoteComponent', () => {
 
   it('shold raise voteChanged event when upvoted', () => {
 
-    const totalVotes = null;
+    let totalVotes = null;
     component.voteChanged.subscribe(res => totalVotes = res);
     component.upVote();
     expect(totalVotes).not.toBeNull();
