@@ -2,7 +2,8 @@ import { FormBuilder } from '@angular/forms';
 import { TodoFormComponent } from './todo-form.component';
 
 describe('TodoFormComponent', () => {
-  var component: TodoFormComponent; 
+
+  let component: TodoFormComponent;
 
   beforeEach(() => {
     component = new TodoFormComponent(new FormBuilder());
@@ -22,4 +23,5 @@ describe('TodoFormComponent', () => {
     expect(control.valid).toBe(false);
 
   });
+
 });
